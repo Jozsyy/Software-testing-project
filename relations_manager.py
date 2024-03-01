@@ -27,7 +27,8 @@ class RelationsManager:
         # Employee.ID=1 is a team lead and 2, 3 are part of the team
         self.teams = {
             1: [2, 3],
-            4: [5, 6]
+            4: [5, 6],
+            8: [3, 2, 5]
         }
 
     def is_leader(self, employee) -> bool:
