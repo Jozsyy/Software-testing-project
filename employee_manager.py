@@ -27,7 +27,8 @@ class EmployeeManager:
         salary = self.calculate_salary(employee)
 
         print(f"{employee.first_name} {employee.last_name} your salary: {salary} has been transferred to you.")
-        pass
+        name_salary=employee.first_name+" "+employee.last_name+" "+str(salary)
+        return name_salary
 
 
 if __name__ == '__main__':
@@ -40,3 +41,12 @@ if __name__ == '__main__':
 
     em = EmployeeManager(rm)
     em.calculate_salary_and_send_email(e1)
+
+    '''
+    employee=Employee(id=8, first_name="Marty", last_name="Byrde", base_salary=2000,
+                     birth_date=datetime.date(1970, 1, 31), hire_date=datetime.date(2014, 10, 10))  #2008
+    output=EmployeeManager(rm).calculate_salary_and_send_email(employee)
+    message=output.split(" ")
+    for i in range(0,len(message)):
+        print(message[i])
+    '''
